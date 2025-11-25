@@ -1,0 +1,31 @@
+{
+  "name": "whatsapp-pairing-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot for generating WhatsApp pairing codes using Baileys",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "^6.7.19",
+    "dotenv": "^16.6.1",
+    "node-cache": "^5.1.2",
+    "pino": "^9.6.0",
+    "telegraf": "^4.16.3"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "whatsapp",
+    "baileys",
+    "pairing",
+    "authentication"
+  ],
+  "author": "Firekid",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
