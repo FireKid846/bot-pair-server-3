@@ -1310,6 +1310,11 @@ async function startBot() {
             console.log(`🌐 Server running on port ${PORT}`);
         });
 
+        console.log('🔄 Starting self-ping and cleanup...');
+        selfPing();
+        startCleanupScheduler();
+        console.log('✅ Self-ping and cleanup started');
+
         await bot.launch();
         console.log('✅ Bot started successfully');
         console.log('📱 Using Baileys with macOS Chrome browser');
@@ -1318,9 +1323,6 @@ async function startBot() {
         console.log('🔄 Max retries: 2');
         console.log('⏰ Timeout: 3 minutes');
         console.log('🧹 Cleanup interval: 3 minutes');
-
-        selfPing();
-        startCleanupScheduler();
 
         process.once('SIGINT', () => {
             server.close();
